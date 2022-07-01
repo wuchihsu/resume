@@ -13,7 +13,7 @@ Current version - [as an online preview][3] and [as a direct download][4].
 Significant changes have been made to the Dana template
 including but not limited to:
 
-- main font (Helvetica)
+- main font (Lato -> Helvetica)
 - removal of icon definition (\texticon)
 - removal AWARDS and PUBLICATIONS sections
 - font size of name

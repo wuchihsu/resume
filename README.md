@@ -17,6 +17,7 @@ including but not limited to:
 - removal of icon definition (\texticon)
 - removal of AWARDS and PUBLICATIONS sections
 - font size of name
+- item gaps (itemsep1pt -> itemsep2pt)
 
 Feel free to use and distribute according to the original license (included in this repo).
 

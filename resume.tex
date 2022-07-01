@@ -1,0 +1,179 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Current template author:
+% Chia-Chi Hsu
+% 
+% SIGNIFICANT CHANGES HAVE BEEN MADE TO THE DANA TEMPLATE
+% including but not limited to:
+% % main font (Helvetica)
+% % removal of icon definition (\texticon)
+% % removal AWARDS and PUBLICATIONS sections
+% % font size of name
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DANA TEMPLATE INFO
+% Dana Seidel (danaseidel.com)
+% 
+% SIGNIFICANT CHANGES HAVE BEEN MADE TO THE ORIGINAL TEMPLATE
+% including but not limited to:
+% % inclusion of fontawesome icons
+% % movement of AWARDS section
+% % addition of a short bio and creation of a CONTACT section
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ORIGINAL TEMPLATE INFO
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[]{deedy-resume}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Chia-Chi Hsu}
+{Software Engineer with 3+ years of experience.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.32\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Contact
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contact}
+{\parskip3pt
+\href{mailto:devcchsu@gmail.com}{\faEnvelope{ devcchsu@gmail.com}}\vspace{3pt} \\
+\href{https://github.com/wuchihsu}{\faGithub{ wuchihsu}}\vspace{3pt} \\
+\href{https://www.linkedin.com/in/wuchihsu}{\faLinkedinSquare{ wuchihsu}}\vspace{3pt} \\
+\href{https://goo.gl/maps/CGLqV6QWdAYszMuo9}{\faMapMarker{ Kaohsiung City, Taiwan}}
+}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\textbullet{} Golang (Echo, GORM)
+\\\textbullet{} Python (NumPy, pandas)
+\\\textbullet{} JavaScript (React, dva)
+\\\textbullet{} RESTful \textbullet{} WebSocket \textbullet{} gRPC
+\\\textbullet{} HLS \textbullet{} WebRTC
+\\\textbullet{} Docker (Docker Compose)
+\\\textbullet{} Redis \textbullet{} Traefik
+\\\textbullet{} Git \textbullet{} GitLab CI/CD
+\\\textbullet{} OpenCV \textbullet{} Point Cloud Library
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+
+\subsection{National Tsing Hua University}
+\descript{MSc in Electrical Engineering}
+\location{2012 - 2014 | Hsinchu City, Taiwan}
+Mainly focused on Computer Vision, had experience with C++, OpenCV, Point Cloud Library.
+\sectionsep
+
+\subsection{National Tsing Hua University}
+\descript{BSc in Electrical Engineering}
+\location{2008 - 2012 | Hsinchu City, Taiwan}
+Mainly focused on Image Processing, had experience with MATLAB, C++, CUDA C.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience}
+
+\runsubsection{ZIG (startup)}
+\descript{| Software Engineer \textbullet{} Internet of Things}
+\location{ Jul 2019 - Sept 2020 | Kaohsiung City, Taiwan}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developed the backend of a low-latency, plugin-free surveillance web viewer
+by requesting Real Time Streaming Protocol (RTSP) streams from a Network Video Recorder (NVR) and transfering H.264 NAL units to the frontend via WebRTC.
+\item Created a surveillance video playback service backend using Hikvision NVR's C API to query date information and request Transport Stream (TS) packets,
+using cgo to integrate C code into Golang and using HTTP Live Streaming (HLS) to provide streams.
+\item Implemented communication protocols (Modbus, YDN23) in Golang to fetch and write data on industrial electronic devices.
+\item Built simulated devices for testing and demonstrating our IoT web system.
+\item Implemented a Docker web UI that could be easily used by our clients
+by using Golang Docker client API for the backend.
+\item Created a simple CI/CD pipeline using GitLab CI/CD and kaniko, including Golang code testing, Docker images building and pushing.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Wistron}
+\descript{| Software Engineer \textbullet{} Computer Vision}
+\location{ Dec 2016 - Oct 2018 | Kaohsiung City, Taiwan}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Built a Machine Learning model to classify images of semi-finished products as either OK or NG 
+by training a convolutional neural network with data augmentation on thousands images.
+\item Developed a simple but effective segmentation process to segment images of semi-finished products into different regions by using Template Matching.
+\item Integrated YOLO's pre-trained person detection model into a Person Re-identification system to build an intelligent surveillance system.
+\item Built a people counter with Kinect, NVIDIA Jetson TX1 and the open source project OpenPTrack for tracking pedestrians.
+\item Wrote and maintained a Dockerfile for Machine Learning model development and deployment.
+\item Utilized gRPC to communicate between Python and C\# programs.
+\end{tightemize}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Project Experience}
+
+\descript{Quantification of Cranial Asymmetry | Graduate Researcher}
+\location{ Oct 2013 - Apr 2014 | Hsinchu City, Taiwan}
+\begin{tightemize}
+\item Developed a pipeline to align two sets of 3D point clouds for evaluating the treatment of cranial asymmetry in infant
+by utilizing Fast Point Feature Histograms (FPFH), Sample Consensus Initial Alignment (SAC-IA) and Iterative Closest Point (ICP).
+\end{tightemize}
+\sectionsep
+
+\descript{Accelerating Ultrasound Imaging Using CUDA | Technical Support}
+\location{ Apr 2012 - Oct 2012 | Hsinchu City, Taiwan}
+\begin{tightemize}
+\item Reduced signal processing time in Ultrasound imaging by 95\% by using CUDA C modules to calculate Hilbert transform and Delay-and-Sum.
+\item Demonstrated CUDA C programing to researchers at Industrial Technology Research Institute.
+\end{tightemize}
+% \sectionsep
+
+\end{minipage}
+\end{document} \documentclass[]{article}

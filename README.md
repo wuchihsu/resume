@@ -15,7 +15,7 @@ including but not limited to:
 
 - main font (Lato -> Helvetica)
 - removal of icon definition (\texticon)
-- removal AWARDS and PUBLICATIONS sections
+- removal of AWARDS and PUBLICATIONS sections
 - font size of name
 
 Feel free to use and distribute according to the original license (included in this repo).
